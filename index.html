@@ -59,4 +59,15 @@
     </div>
 
     <script>
-        // 탄생일 설정: 2019년
+        // 탄생일 설정: 2019년 7월 18일
+        const birthday = new Date("2019-07-18T00:00:00");
+        const today = new Date();
+        
+        // 날짜 계산 (태어난 날을 1일로 포함)
+        const diffTime = today - birthday;
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
+        
+        document.getElementById("dday-result").innerText = "D+" + diffDays;
+    </script>
+</body>
+</html>
